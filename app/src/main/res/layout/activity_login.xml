@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_signin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:padding="40dp"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="115dp"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/perishable_goods" />
+
+    <EditText
+        android:id="@+id/txtUserSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="150dp"
+        android:background="@color/colorAccent"
+        android:drawableLeft="@mipmap/man_user"
+        android:gravity="center"
+        android:hint="@string/username_hint"
+        android:inputType="text"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHint="@color/colorPrimaryDark"
+        android:textSize="16sp" />
+
+
+    <EditText
+        android:id="@+id/txtPassSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="16sp"
+        android:layout_below="@id/txtUserSignIn"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHint="@color/colorPrimaryDark"
+        android:drawableLeft="@mipmap/key"
+        android:background="@color/colorAccent"
+        android:hint="@string/password_hint"
+        android:gravity="center"
+        android:inputType="textPassword"/>
+
+
+    <Button
+        android:id="@+id/bttnSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtPassSignIn"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/sign_in"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txtForgotSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bttnSignIn"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:hint="@string/reset_password"
+        android:linksClickable="true"
+        android:textColorHint="@color/colorPrimaryDark"
+        android:textSize="12sp" />
+
+    <View
+        android:id="@+id/vwDivSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/txtForgotSignIn"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorPrimaryDark" />
+
+    <TextView
+        android:id="@+id/txtNewSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vwDivSignIn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:hint="@string/sign_in_hint"
+        android:linksClickable="true"
+        android:textColorHint="@color/colorPrimaryDark"
+        android:textSize="12sp" />
+
+    <ProgressBar
+        android:id="@+id/signInBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtNewSignIn"
+        android:layout_centerHorizontal="true"
+        android:indeterminate="true"
+        android:visibility="gone" />
+</RelativeLayout>

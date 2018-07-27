@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SellerActivity">
+
+    <EditText
+        android:id="@+id/txtGoodName"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="@string/item_"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHint="@color/colorPrimaryDark"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/txtExpDate"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:inputType="date"
+        android:hint="@string/exp_item"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHint="@color/colorPrimaryDark"
+        android:layout_below="@+id/txtGoodName"
+        android:layout_marginTop="20dp"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/txtPrice"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/txtExpDate"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:hint="@string/price_"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHint="@color/colorPrimaryDark"
+        android:layout_marginTop="20dp"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/bttnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/save_client"
+        android:layout_below="@+id/txtPrice"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorAccent"
+        android:textColorHint="@color/colorAccent"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorPrimaryDark"/>
+
+</RelativeLayout>

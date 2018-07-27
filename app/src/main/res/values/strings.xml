@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">PerishableGoods</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="sign_in_hint">New here? Sign up</string>
+    <string name="sign_in">sign in</string>
+    <string name="reset_password">reset password?</string>
+    <string name="password_hint">Password</string>
+    <string name="password_hint_2">Retype password</string>
+    <string name="username_hint">username</string>
+    <string name="buyer_hint">buyer</string>
+    <string name="seller_hint">seller</string>
+    <string name="save_details">save</string>
+    <string name="cancel_details">Cancel</string>
+    <string name="user_fname">First name</string>
+    <string name="user_lname">Last name</string>
+    <string name="user_num">User\'s mobile number (07***)</string>
+    <string name="user_email">User\'s email address</string>
+    <string name="exp_item">Item\'s expiry date (dd.mm.yyyy)</string>
+    <string name="user_anny">User\'s anniversary (dd.mm.yyyy)</string>
+    <string name="save_client">SAVE</string>
+    <string name="close_">CLOSE</string>
+    <string name="update_user">Update User</string>
+    <string name="view_user">View User</string>
+    <string name="price_">Ksh. 0 \- 100000</string>
+    <string name="item_">Good name</string>
+</resources>

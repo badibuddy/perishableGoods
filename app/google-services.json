@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "783447088042",
+    "firebase_url": "https://perishablegoods-df05d.firebaseio.com",
+    "project_id": "perishablegoods-df05d",
+    "storage_bucket": "perishablegoods-df05d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:783447088042:android:d7999c939673d1bd",
+        "android_client_info": {
+          "package_name": "com.janoos.badi.perishablegoods"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "783447088042-0g6ih6rmjo6vj61cp7ps6k1fi9kotsr8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.janoos.badi.perishablegoods",
+            "certificate_hash": "1e5a0d0af498424e49283977c710787f872ce0bf"
+          }
+        },
+        {
+          "client_id": "783447088042-3sea4j4o60emt3bfr69jfqfkr9bjj57b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBT-rOZXlnDe04waz80nKA9luLJpUvwifk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "783447088042-3sea4j4o60emt3bfr69jfqfkr9bjj57b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
