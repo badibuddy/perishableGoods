@@ -42,8 +42,6 @@ public class BuyerActivity extends AppCompatActivity {
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
 
                 String gname = dataSnapshot.getValue(String.class);
-
-
                 mListgoods.add(gname);
                 arrayAdapter.notifyDataSetChanged();
 
@@ -52,6 +50,9 @@ public class BuyerActivity extends AppCompatActivity {
             @Override
             public void onChildChanged(DataSnapshot dataSnapshot, String s) {
 
+                String gname = dataSnapshot.getValue(String.class);
+                mListgoods.add(gname);
+                arrayAdapter.notifyDataSetChanged();
             }
 
             @Override

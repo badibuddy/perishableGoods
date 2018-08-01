@@ -31,7 +31,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     private TextView nVwNewSignin, nVwForgotSignIn;
     private Button bttnSignIn;
     private ProgressBar SignInProgress;
-    private String TxtPassword, TxtUserName, TxtSellerName;
+    public String TxtPassword, TxtUserName, TxtSellerName, DBUsername, DBPassword;
     private boolean doubleBackToExitPressedOnce;
     private Bundle bundleFK;
     private Intent intentFK;
@@ -136,10 +136,17 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                Iterable<DataSnapshot> userChildren = dataSnapshot.getChildren();
 
-                for (DataSnapshot userData : userChildren) {
+                for (DataSnapshot userData : dataSnapshot.getChildren()) {
+
+//                    String stage = dataSnapshot.child("staging").child(key).child("gname").getValue(String.class);
+                    DBUsername = userData.child("uname").getValue().toString();
+                    DBPassword = userData.child("passwd").getValue().toString();
+
                     User c = userData.getValue(User.class);
+//                    Log.d("Staged goods are: ", stage);
+                    Log.d("username as per db: ", DBUsername);
+                    Log.d("password as per db: ", DBPassword);
 
                     Log.d("User Details:: ", "User Name: " + c.getUname() + " " + "Password: " + c.getPasswd()
                             + " " + "UserType:" + c.getType());
@@ -148,7 +155,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
                     String TypeValue = String.valueOf(c.getType());
 
 
-                    if (TxtPassword.equals(passvalue)) {
+                    if (TxtUserName.equals(txtUsername) && TxtPassword.equals(passvalue)) {
                         Toast.makeText(LoginActivity.this, "Welcome: " + TxtUserName, Toast.LENGTH_SHORT).show();
 
                         if (TypeValue.equals("2")) {
@@ -158,17 +165,22 @@ public class LoginActivity extends Activity implements View.OnClickListener {
                         } else if (TypeValue.equals("1")) {
                             Intent sellerIntent = new Intent(LoginActivity.this, SellerActivity.class);
                             Bundle bundleAdmin = new Bundle();
-                            bundleAdmin.putString("sellername", txtUsername);
+                            bundleAdmin.putString("username", txtUsername);
+                            sellerIntent.putExtras(bundleAdmin);
+                            startActivity(sellerIntent);
+                        } else if (TypeValue.equals("3")) {
+                            Intent sellerIntent = new Intent(LoginActivity.this, ListStagedActivity.class);
+                            Bundle bundleAdmin = new Bundle();
+                            bundleAdmin.putString("username", txtUsername);
                             sellerIntent.putExtras(bundleAdmin);
                             startActivity(sellerIntent);
                         }
-                    }else {
-                        Intent adminIntent = new Intent(LoginActivity.this, AdminActivity.class);
-                        startActivity(adminIntent);
+                    } else {Toast.makeText(LoginActivity.this, "Invalid credentials,try again.", Toast.LENGTH_SHORT).show();
+
                     }
                 }
 
-                Toast.makeText(LoginActivity.this, "Invalid credentials,try again.", Toast.LENGTH_SHORT).show();
+
 
 
             }

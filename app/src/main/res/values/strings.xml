@@ -23,4 +23,5 @@
     <string name="view_user">View User</string>
     <string name="price_">Ksh. 0 \- 100000</string>
     <string name="item_">Good name</string>
+    <string name="error">ERROR</string>
 </resources>

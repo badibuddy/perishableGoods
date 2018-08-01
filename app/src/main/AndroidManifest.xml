@@ -31,7 +31,8 @@
         <activity android:name=".RegisterActivity" />
         <activity android:name=".AdminActivity" />
         <activity android:name=".BuyerActivity" />
-        <activity android:name=".SellerActivity"></activity>
+        <activity android:name=".SellerActivity" />
+        <activity android:name=".ListStagedActivity"></activity>
     </application>
 
 </manifest>

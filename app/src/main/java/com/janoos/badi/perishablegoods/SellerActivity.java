@@ -17,6 +17,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
@@ -31,6 +32,7 @@ public class SellerActivity extends Activity implements View.OnClickListener {
     FirebaseDatabase database;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +45,7 @@ public class SellerActivity extends Activity implements View.OnClickListener {
         TxtExpDate = findViewById(R.id.txtExpDate);
         bttnSave = findViewById(R.id.bttnSave);
         bttnSave.setOnClickListener(this);
-        TxtSellerName = bundleFK.getString("sellername");
+        TxtSellerName = bundleFK.getString("username");
 
     }
 
@@ -59,7 +61,7 @@ public class SellerActivity extends Activity implements View.OnClickListener {
 
     private void save() {
         initialize();
-        TxtSellerName = bundleFK.getString("sellername");
+        TxtSellerName = bundleFK.getString("username");
         TxTGoods = TxtGoodsName.getText().toString().trim();
         TxtDate = TxtExpDate.getText().toString().trim();
         txtPrice = TxtPrice.getText().toString();
@@ -69,7 +71,7 @@ public class SellerActivity extends Activity implements View.OnClickListener {
         goodsMap.put("gname", TxTGoods);
         goodsMap.put("expdate", TxtDate);
         goodsMap.put("price", txtPrice);
-        goodsMap.put("selername", TxtSellerName);
+        goodsMap.put("uname_s", TxtSellerName);
 
         databaseReference.push().setValue(goodsMap);
 
