@@ -155,29 +155,27 @@ public class LoginActivity extends Activity implements View.OnClickListener {
                     String TypeValue = String.valueOf(c.getType());
 
 
-                    if (TxtUserName.equals(txtUsername) && TxtPassword.equals(passvalue)) {
+                    if ( TxtPassword.equals(passvalue) && TypeValue.equals("2")) {
                         Toast.makeText(LoginActivity.this, "Welcome: " + TxtUserName, Toast.LENGTH_SHORT).show();
-
-                        if (TypeValue.equals("2")) {
-
                             Intent buyerIntent = new Intent(LoginActivity.this, BuyerActivity.class);
                             startActivity(buyerIntent);
-                        } else if (TypeValue.equals("1")) {
+                    } else if (TxtPassword.equals(passvalue) && TypeValue.equals("1")) {
                             Intent sellerIntent = new Intent(LoginActivity.this, SellerActivity.class);
                             Bundle bundleAdmin = new Bundle();
                             bundleAdmin.putString("username", txtUsername);
                             sellerIntent.putExtras(bundleAdmin);
                             startActivity(sellerIntent);
-                        } else if (TypeValue.equals("3")) {
+                     } else if (TxtPassword.equals(passvalue) && TypeValue.equals("3")) {
                             Intent sellerIntent = new Intent(LoginActivity.this, ListStagedActivity.class);
                             Bundle bundleAdmin = new Bundle();
                             bundleAdmin.putString("username", txtUsername);
                             sellerIntent.putExtras(bundleAdmin);
                             startActivity(sellerIntent);
-                        }
-                    } else {Toast.makeText(LoginActivity.this, "Invalid credentials,try again.", Toast.LENGTH_SHORT).show();
+                     } else {
+                            Toast.makeText(LoginActivity.this, "Invalid credentials,try again.", Toast.LENGTH_SHORT).show();
 
                     }
+
                 }
 
 
