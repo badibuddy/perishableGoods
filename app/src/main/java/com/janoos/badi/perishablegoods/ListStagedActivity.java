@@ -91,6 +91,7 @@ public class ListStagedActivity extends Activity {
                 new String[]{"goodname", "sellername", "goodexpiry", "goodcost"},
                 new int[]{R.id.Vw_gname,R.id.Vw_seller_name, R.id.Vw_expire, R.id.Vw_cost});
         mListView.setAdapter(adapter);
+        mListView.setLongClickable(true);
 
         mListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
@@ -99,16 +100,36 @@ public class ListStagedActivity extends Activity {
 
                 final AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(ListStagedActivity.this);
                     dialogBuilder.setTitle("Remove Items!");
+                    dialogBuilder.setMessage("Do you want to add the item to goods sold?");
                     dialogBuilder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
-                            Toast.makeText(getApplicationContext(), "You clicked yes"
+
+                            Toast.makeText(getApplicationContext(), "Adding "+ TxtGoodName
                                     , Toast.LENGTH_SHORT).show();
+
                         }
                     }).setNegativeButton("No", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
-                            Toast.makeText(getApplicationContext(), "You clicked no"
+                            Query queryref = databaseReference.child("staging").orderByChild("gname").equalTo(VwTxtGoodName).getRef();
+
+                            queryref.addListenerForSingleValueEvent(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(DataSnapshot dataSnapshot) {
+                                    for (DataSnapshot listedGoodsData : dataSnapshot.getChildren()) {
+                                        TxtGoodName = listedGoodsData.child("gname").getValue().toString();
+                                        Log.d("testing if : ", TxtGoodName);
+                                        listedGoodsData.getRef().removeValue();
+                                    }
+                                }
+
+                                @Override
+                                public void onCancelled(DatabaseError databaseError) {
+
+                                }
+                            });
+                            Toast.makeText(getApplicationContext(), "Removed "+ TxtGoodName
                                     , Toast.LENGTH_SHORT).show();
                         }
                     });
