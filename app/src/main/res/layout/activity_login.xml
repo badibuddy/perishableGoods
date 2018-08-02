@@ -5,14 +5,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+<<<<<<< HEAD
 
     <RelativeLayout
+=======
+<RelativeLayout
+>>>>>>> 0d3874e94bb97c939723c2441ba2d4ef62f41753
     android:id="@+id/activity_signin"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff"
     android:padding="40dp"
     tools:context=".LoginActivity">
+
+
 
     <ImageView
         android:layout_width="wrap_content"
@@ -104,4 +110,8 @@
         android:indeterminate="true"
         android:visibility="gone" />
 </RelativeLayout>
+<<<<<<< HEAD
 </ScrollView>
+=======
+</ScrollView>
+>>>>>>> 0d3874e94bb97c939723c2441ba2d4ef62f41753

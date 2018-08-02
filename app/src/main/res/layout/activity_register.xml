@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0d3874e94bb97c939723c2441ba2d4ef62f41753
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -7,16 +10,19 @@
     tools:context=".RegisterActivity"
     android:layout_width="wrap_content"
     android:layout_height="match_parent">
+<<<<<<< HEAD
 
 <RelativeLayout
 
+=======
+<RelativeLayout
+>>>>>>> 0d3874e94bb97c939723c2441ba2d4ef62f41753
     android:id="@+id/activity_register"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:padding="40dp"
     android:background="@color/colorAccent"
-    tools:context=".RegisterActivity">
-
+    >
     <ImageView
         android:id="@+id/imgPerishable"
         android:layout_width="wrap_content"
@@ -163,6 +169,9 @@
         android:layout_below="@id/bttnCancelReg"
         android:visibility="gone" />
 
-
 </RelativeLayout>
+<<<<<<< HEAD
 </ScrollView>
+=======
+</ScrollView>
+>>>>>>> 0d3874e94bb97c939723c2441ba2d4ef62f41753
