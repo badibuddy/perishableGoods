@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="*"
+    >
+    <TableRow
+        android:layout_width="0dp"
+        android:id="@+id/Vw_row"
+        >
+            <TextView
+                android:id="@+id/Vw_gname"
+                android:hint="Goods name"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:paddingRight="5dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp"
+                />
+            <TextView
+                android:id="@+id/Vw_seller_name"
+                android:hint="Seller name"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:paddingRight="5dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/Vw_expire"
+                android:hint="Expiry Date"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:paddingRight="5dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/Vw_cost"
+                android:hint="Goods cost"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp" />
+    </TableRow>
+</TableLayout>

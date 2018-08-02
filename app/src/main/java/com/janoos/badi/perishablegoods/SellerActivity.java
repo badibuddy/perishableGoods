@@ -65,7 +65,7 @@ public class SellerActivity extends Activity implements View.OnClickListener {
         TxTGoods = TxtGoodsName.getText().toString().trim();
         TxtDate = TxtExpDate.getText().toString().trim();
         txtPrice = TxtPrice.getText().toString();
-        GetGoods goods = new GetGoods();
+//        GetGoods goods = new GetGoods();
 
         HashMap<String, String> goodsMap = new HashMap<String, String>();
         goodsMap.put("gname", TxTGoods);

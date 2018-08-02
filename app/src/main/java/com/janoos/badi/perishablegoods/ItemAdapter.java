@@ -42,7 +42,7 @@ public class ItemAdapter extends ArrayAdapter<Item> {
         // to inflate it basically means to render, or show, the view.
         if (v == null) {
             LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            v = inflater.inflate(R.layout.list_buy, null);
+            v = inflater.inflate(R.layout.list_staged, null);
         }
 
         /*
